@@ -21,13 +21,9 @@ let years = [2008,2008,2010,2011,2011,2012,2013,2013,2014,2014,2015,2015,2016,20
              2017,2017,2017,2017,2018,2018,2019,2019,2019,2021,2021,2021,2021]
 
 let find_freq = {}
-for (e of years){
-    console.log(e)
-    if (e == find_freq[e]){
-        find_freq[e]++;
-    }else find_freq[e] = 1;
-}
+
 // years.forEach(e => find_freq[e] ? find_freq[e]++ : find_freq[e] = 1);
 
 console.log(find_freq)
+
 
