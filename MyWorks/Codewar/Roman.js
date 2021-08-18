@@ -21,18 +21,14 @@ function romanConvert(s){
     s = s.split('').map(convert);
     console.log(s);
     let rs = 0 ;
-    // for(let i = 0 ; i < s.length ; i ++){
-    //     if(s[i] < s[i+1]){
-    //         rs += (s[i+1]) - s[i];
-    //         i++;
-    //     }else{
-    //         rs += s[i];
-    //     }
-    // }
-    s.forEach((value , index , array) => {
-        return 0;
-    });
-
+    for(let i = 0 ; i < s.length ; i ++){
+        if(s[i] < s[i+1]){
+            rs += (s[i+1]) - s[i];
+            i++;
+        }else{
+            rs += s[i];
+        }
+    }
     return rs;
 }
 
