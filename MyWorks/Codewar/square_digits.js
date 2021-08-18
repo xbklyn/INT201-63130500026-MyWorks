@@ -5,7 +5,6 @@
 function descendingOrder(n){
     let arrN = [],
     sNum = n.toString();
-    console.log(sNum);
 
     for(let i = 0 ; i < sNum.length; i++){
         arrN.push(sNum.charAt(i));
@@ -20,7 +19,7 @@ function descendingOrder(n){
     return parseInt(num);
   }
 
-//The better way to do doscending order 
+//The better way to do descending order 
   function descendingOrder(n){
     return parseInt(String(n).split('').sort().reverse().join(''))
   }
