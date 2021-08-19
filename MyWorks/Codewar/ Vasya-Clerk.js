@@ -16,7 +16,7 @@ function tickets(peopleInLine){
             cashier -= (pp - 25);
             cashier += pp;
         }
-        else {return `NO`};
+         {return `NO`};
     }
     return `YES`;
 
@@ -28,3 +28,5 @@ function tickets(peopleInLine){
     25, 100
   ]));
 
+
+  //! This code needs to be solved.
