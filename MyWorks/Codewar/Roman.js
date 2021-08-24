@@ -1,24 +1,18 @@
-function convert(n) {
-    if (n == 'I') {
-      n = 1;
-    } else if (n == 'V') {
-      n = 5;
-    } else if (n == 'X') {
-      n = 10;
-    } else if (n == 'L') {
-      n = 50;
-    } else if (n == 'C') {
-      n = 100;
-    } else if (n == 'D'){
-        n = 500;
-    } else if(n == 'M'){
-        n = 1000;
-    }
-    return n;
-  }
+
+
 
 function romanConvert(s){
-    s = s.split('').map(convert);
+  const romanHash = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+
+    s = s.split('').map(a => romanHash[a]);
     console.log(s);
     let rs = 0 ;
     for(let i = 0 ; i < s.length ; i ++){

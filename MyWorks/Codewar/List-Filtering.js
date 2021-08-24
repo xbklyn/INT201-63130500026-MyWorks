@@ -2,10 +2,10 @@
 
 function filter_list(l) {
     let arr = Array.from(l);
-    console.log(arr);
+    console.log(arr.length);
     for(let i  = 0; arr.length; i++ ){
         console.log(arr);
-        if(typeof arr[i] !== 'number') arr.slice(i,i);
+        if(typeof arr[i] !== 'number') arr.slice(i,i+1);
     }
 
     console.log(arr);
