@@ -1,4 +1,4 @@
-const Notes = {
+const Notes = {         //สร้าง object notes เพื่อเก็ฐค่าแบงค์และจำนวนแบงค์ที่มีอยู่
      "500-Notes" : 0,
      "100-Notes" : 0,
      "50-Notes" : 0,
@@ -7,9 +7,9 @@ const Notes = {
      "5-Notes" : 0,
      "2-Notes" : 0,
      "1-Notes" : 0,
-     add (key , value) {Notes[`${key}-Notes`] += value;},
-     remove (key) {Notes[`${key}-Notes`] -= 1;},
-     check (key) {return Notes[`${key}-Notes`] > 0;}
+     add (key , value) {Notes[`${key}-Notes`] += value;}, //function สำหรับเพิ่มแบงค์ใน Notes
+     remove (key) {Notes[`${key}-Notes`] -= 1;}, //function สำหรับนำบงค์ออกจาก Notes
+     check (key) {return Notes[`${key}-Notes`] > 0;} //
 }
 
 function changeCalculation(totalPrice, moneyFromCustomer){
@@ -18,11 +18,12 @@ function changeCalculation(totalPrice, moneyFromCustomer){
     
     let notes = [500,100,50,20,10,5,2];
     for(let note of notes){
+        
+        if(Notes.check(note)){Notes.remove(note)} else return `Not enough changes.`
         while(totalChange - note >= 0 ){
             totalChange -= note;
             changes[`${note}-Change`] = changes[`${note}-Change`] === undefined ? changes[`${note}-Change`] = 1 : changes[`${note}-Change`]+= 1; 
             
-            if(Notes.check(note)){Notes.remove(note)} else return `Not enough changes.`
         }
     
     }
