@@ -22,7 +22,7 @@ function changeCalculation(totalPrice, moneyFromCustomer){
             totalChange -= note;
             changes[`${note}-Change`] = changes[`${note}-Change`] === undefined ? changes[`${note}-Change`] = 1 : changes[`${note}-Change`]+= 1; 
             
-            if(Notes.check(note)){Notes.remove(key)} return `Not enough changes.`
+            if(Notes.check(note)){Notes.remove(note)} else return `Not enough changes.`
         }
     
     }
