@@ -21,8 +21,8 @@ function changeCalculation(totalPrice, moneyFromCustomer){
         while(totalChange - note >= 0 ){
             totalChange -= note;
             changes[`${note}-Change`] = changes[`${note}-Change`] === undefined ? changes[`${note}-Change`] = 1 : changes[`${note}-Change`]+= 1; 
+            
             if(Notes.check(note)){Notes.remove(key)} return `Not enough changes.`
-
         }
     
     }
@@ -31,14 +31,14 @@ function changeCalculation(totalPrice, moneyFromCustomer){
 }
 
 
-// Notes.add(500 , 100);
-// Notes.add(100 , 100);
-// Notes.add(50 , 100);
-// Notes.add(20 , 100);
-// Notes.add(10 , 100);
-// Notes.add(5 , 100);
-// Notes.add(2 , 100);
-// Notes.add(1 , 100);
+Notes.add(500 , 100);
+Notes.add(100 , 100);
+Notes.add(50 , 100);
+Notes.add(20 , 100);
+Notes.add(10 , 100);
+Notes.add(5 , 100);
+Notes.add(2 , 100);
+Notes.add(1 , 100);
 console.log(Notes);
 
 console.log(changeCalculation(1000,2000));
