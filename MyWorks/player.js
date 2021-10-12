@@ -1,9 +1,12 @@
 const player  = (fname, lname) => {
-    firstName : fname === undefined ? fname : `unknown`;
-    lastName : lname ? lname : `unknown`;
-    
+    return player = {
+        firstName : fname ? fname : `unknown`,
+        lastName : lname ? lname : `unknown`,
+        name () { return `${firstName} ${lastName}`;}
     }
+}
 
-    player("Chotiwit" , "Souyan");
-    console.log(player.firstName);
+
+
+
 
